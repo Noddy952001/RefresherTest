@@ -1,0 +1,46 @@
+{
+  "city": [
+    {
+      "city": "Rudrapur",
+      "country": "India",
+      "population": "2100",
+      "id": 1
+    },
+    {
+      "city": "Lucknow",
+      "country": "USA",
+      "population": "3200",
+      "id": 2
+    },
+    {
+      "city": "Delhi",
+      "country": "Europe",
+      "population": "12000",
+      "id": 3
+    },
+    {
+      "city": "Nanita",
+      "country": "France",
+      "population": "5000",
+      "id": 4
+    }
+  ],
+  "country": [
+    {
+      "country": "india",
+      "id": 1
+    },
+    {
+      "country": "india",
+      "id": 2
+    },
+    {
+      "country": "USA",
+      "id": 3
+    },
+    {
+      "country": "Turkey",
+      "id": 5
+    }
+  ]
+}
