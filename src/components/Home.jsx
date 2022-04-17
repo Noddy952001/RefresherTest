@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios"
 import {Navbar} from "./navbar"
+import { Link } from "react-router-dom";
 
 
 
@@ -34,6 +35,10 @@ export const Home = () => {
         setdelData(true)
         getdata()
     }
+
+
+   
+
 
 
     function handel_Acc_Dcc(){
@@ -115,7 +120,7 @@ return(
                                     <td className="table">{el.population}</td>
                                     <td className="table">{el.city}</td>
                                     <td className="table">{el.country}</td>
-                                   <td> <button>Edit</button></td>
+                                   < td ><Link to={`/update${el.id}`}> <button>Edit</button></Link></td>
                                     <td><button
                                         onClick={ ()=> deletedata(el.id) }
 

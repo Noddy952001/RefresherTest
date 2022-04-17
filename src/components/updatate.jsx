@@ -4,15 +4,18 @@ import {useState} from "react"
 import axios from "axios"
 import { Store } from "../Reducer/sotre"
 import { Navbar } from "./navbar"
+import { Link } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 
-export const Addcity = () => {
+export const Updatecity = () => {
 
     const dispatch = useDispatch()
 
     const [city , setCity] = useState()
     const [country , setCountry] = useState()
     const [population , setPopulation] = useState()
+     const {id} = useParams()
 
     const value = useSelector((store => store) )
 
@@ -28,7 +31,7 @@ export const Addcity = () => {
     
     const   handelSubmit = () => {
 
-        axios.post("http://localhost:3001/city", data).then(function(res){
+        axios.put(`http://localhost:3001/city/${id}`, data).then(function(res){
             console.log(res.data)
         })
 
@@ -42,7 +45,7 @@ export const Addcity = () => {
     return(
         <div>
 
-            <h1>Add City </h1>
+            <h1>Update Page</h1>
 
             <Navbar/>
 
@@ -70,9 +73,10 @@ export const Addcity = () => {
                 }}    
             /> <br />
 
-                <button
+
+                < td ><Link to={"/"}> <button
                     onClick={handelSubmit}
-                >Add</button>
+                >Edit</button></Link></td>
 
         </div>
     ) 

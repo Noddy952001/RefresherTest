@@ -1,4 +1,3 @@
-import React from "react"
 import { Change_City ,Change_Country , Change_Population } from "./action"
 
 const initialstate = {
